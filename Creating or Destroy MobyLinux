@@ -1,0 +1,23 @@
+##Creating a MobyLinux
+
+When trying to destroy MobyLinux, this error would come up:
+.\MobyLinux.ps1 : File C:\Program Files\Docker\Docker\resources\MobyLinux.ps1 cannot be loaded because running scripts
+is disabled on this system. For more information, see about_Execution_Policies at
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ .\MobyLinux.ps1 -Destroy
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+  
+# Need to use this code before starting so you don't get the error message:
+*Stop-Service com.docker.service
+*cd "C:\Program Files\Docker\Docker\resources"
+*powershell Set-ExecutionPolicy RemoteSigned
+
+
+#Destroy container
+'.\MobyLinux.ps1 -destroy'
+
+#Create container
+'.\MobyLinux.ps1 -Create'
