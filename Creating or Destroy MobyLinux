@@ -11,10 +11,10 @@ At line:1 char:1
     + FullyQualifiedErrorId : UnauthorizedAccess
   
 # Need to use this code before starting so you don't get the error message:
-*Stop-Service com.docker.service
-*cd "C:\Program Files\Docker\Docker\resources"
+*May not need this ( cd "C:\Program Files\Docker\Docker\resources" )
 *powershell Set-ExecutionPolicy RemoteSigned
-
+Set-ExecutionPolicy Bypass
+Yes(y)
 
 #Destroy container
 '.\MobyLinux.ps1 -destroy'
@@ -42,3 +42,4 @@ Enabled Shutdown
 Enabled Time Synchronization
 Disabled VSS
 VM created.'
+
