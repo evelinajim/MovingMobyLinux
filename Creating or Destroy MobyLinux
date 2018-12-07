@@ -21,3 +21,24 @@ At line:1 char:1
 
 #Create container
 '.\MobyLinux.ps1 -Create'
+
+
+should print out:
+'Script started at 11:31:37.442
+Modules loaded at 11:31:37.673
+Creating Switch: DockerNAT...
+Switch created.
+Set IP address on switch
+Creating VM MobyLinuxVM...
+Setting CPUs to 2 and Memory to 2048 MB
+Creating dynamic VHD: C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks\MobyLinuxVM.vhdx
+Attach VHD C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks\MobyLinuxVM.vhdx
+Connect Internal Switch DockerNAT
+Attach DVD .\docker-for-win.iso
+Disabled Guest Service Interface
+Enabled Heartbeat
+Disabled Key-Value Pair Exchange
+Enabled Shutdown
+Enabled Time Synchronization
+Disabled VSS
+VM created.'
